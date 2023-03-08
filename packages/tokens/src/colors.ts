@@ -28,6 +28,6 @@ export const lightModeColors = {
   error: '#E00000',
   error_1: '#E5A27D',
   error_2: '#792400',
-  black: '#000',
-  white: '#fff',
+  black: '#000000',
+  white: '#ffffff',
 };

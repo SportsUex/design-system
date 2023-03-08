@@ -1,0 +1,125 @@
+import { Meta, ColorPalette, ColorItem } from "@storybook/addon-docs";
+import { themes, ThemeProvider, ensure } from "@storybook/theming";
+import { colors, lightModeColors } from "@sportsuex/tokens";
+
+<Meta title="Tokens/Colors" />
+
+<div style={{background:colors.dark_bg, padding:'2rem', borderRadius:"10px 10px 0px 0px"}}>
+<ThemeProvider theme={ensure(themes.dark)}>
+        <h1 style={{color:colors.white,fontFamily:"Rajdhani",fontWeight:700}}>Dark Theme</h1>
+  <ColorPalette>
+    <ColorItem
+      title="primary"
+      subtitle="PRIMARY COLOR DARK MODE"
+      colors={{ primary: colors.primary }}
+    />
+    <ColorItem
+      title="background"
+      subtitle="COLORS FOR BACKGROUNDS"
+      colors={{ dark_bg: colors.dark_bg, light_bg: colors.light_bg }}
+    />
+    <ColorItem
+      title="success"
+      subtitle="COLORS FOR SUCCESS CASES"
+      colors={{
+        success: colors.success,
+        success_1: colors.success_1,
+        success_2: colors.success_2,
+      }}
+    />
+    <ColorItem
+      title="alert"
+      subtitle="COLORS FOR ALERT CASES"
+      colors={{
+        alert: colors.alert,
+        alert_1: colors.alert_1,
+        alert_2: colors.alert_2,
+      }}
+    />
+    <ColorItem
+      title="error"
+      subtitle="COLORS FOR ERROR CASES"
+      colors={{
+        error: colors.error,
+        error_1: colors.error_1,
+        error_2: colors.error_2,
+      }}
+    />
+    <ColorItem
+      title="neutral"
+      subtitle="NEUTRAL COLORS"
+      colors={{
+        white: colors.white,
+        black: colors.black,
+      }}
+    />
+  </ColorPalette>
+</ThemeProvider>
+
+</div>
+
+<div style={{background:lightModeColors.light_bg, padding:'2rem', borderRadius:"0px 0px 10px 10px"}}>
+
+<h1
+  style={{
+    color: lightModeColors.dark_bg,
+    fontFamily: "Rajdhani",
+    fontWeight: 700,
+  }}
+>
+  Light Theme
+</h1>
+<ThemeProvider theme={ensure(themes.light)}>
+  <ColorPalette>
+    <ColorItem
+      title="primary"
+      subtitle="PRIMARY COLOR DARK MODE"
+      colors={{ primary: lightModeColors.primary }}
+    />
+    <ColorItem
+      title="background"
+      subtitle="COLORS FOR BACKGROUNDS"
+      colors={{
+        dark_bg: lightModeColors.dark_bg,
+        light_bg: lightModeColors.light_bg,
+      }}
+    />
+    <ColorItem
+      title="success"
+      subtitle="COLORS FOR SUCCESS CASES"
+      colors={{
+        success: lightModeColors.success,
+        success_1: lightModeColors.success_1,
+        success_2: lightModeColors.success_2,
+      }}
+    />
+    <ColorItem
+      title="alert"
+      subtitle="COLORS FOR ALERT CASES"
+      colors={{
+        alert: lightModeColors.alert,
+        alert_1: lightModeColors.alert_1,
+        alert_2: lightModeColors.alert_2,
+      }}
+    />
+    <ColorItem
+      title="error"
+      subtitle="COLORS FOR ERROR CASES"
+      colors={{
+        error: lightModeColors.error,
+        error_1: lightModeColors.error_1,
+        error_2: lightModeColors.error_2,
+      }}
+    />
+    <ColorItem
+      title="neutral"
+      subtitle="NEUTRAL COLORS"
+      colors={{
+        white: lightModeColors.white,
+        black: lightModeColors.black,
+      }}
+    />
+  </ColorPalette>
+</ThemeProvider>
+
+</div>

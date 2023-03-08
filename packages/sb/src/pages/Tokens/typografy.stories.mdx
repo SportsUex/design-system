@@ -1,0 +1,42 @@
+import { Meta, Typeset } from "@storybook/addon-docs/blocks";
+import { fontSizes, fontWeights, fonts, colors } from "@sportsuex/tokens";
+import { themes, ThemeProvider, ensure } from "@storybook/theming";
+import { darkTheme } from "../../../.storybook/theme";
+import { TypographyRaj, TypographyInter } from "../../components/typography";
+
+<Meta title="Tokens/Typography/Rajdhani" />
+
+<div
+  style={{
+    display: "flex",
+    justifyContent: "center",
+    flexDirection: "column",
+    padding: "4rem",
+    borderRadius: "10px 10px 10px 10px",
+    background: colors.white,
+  }}
+>
+  <h1 style={{ fontWeight: "700", fontFamily: "Rajdhani" }}>Rajdhani</h1>
+  <p>
+    <b>Font:</b> "Rajdhani"
+  </p>
+  <p>
+    <b>Weights:</b> 400, 500, 600, 700
+  </p>
+  <div style={{ marginTop: "5rem" }}>
+    <TypographyRaj />
+  </div>
+
+  <h1 style={{ fontWeight: "700", fontFamily: "Inter", marginTop: "10rem" }}>
+    Inter
+  </h1>
+  <p>
+    <b>Font:</b> "Inter"
+  </p>
+  <p>
+    <b>Weights:</b> 400, 500, 600, 700
+  </p>
+  <div style={{ marginTop: "5rem" }}>
+    <TypographyInter />
+  </div>
+</div>
