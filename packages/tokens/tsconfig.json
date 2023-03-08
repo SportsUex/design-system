@@ -1,0 +1,4 @@
+{
+  "extends":"@sportsuex/ts-config/base.json",
+  "include": ["src"]
+}

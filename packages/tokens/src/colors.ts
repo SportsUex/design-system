@@ -1,0 +1,33 @@
+export const colors = {
+  primary: '#7B00DC',
+  dark_bg: '#2E2E2E',
+  light_bg: '#DEDEDE',
+  success: '#2DE000',
+  success_1: '#92E57D',
+  success_2: '#135E00',
+  alert: '#E0CA00',
+  alert_1: '#E5CE7D',
+  alert_2: '#796D00',
+  error: '#E00000',
+  error_1: '#E5A27D',
+  error_2: '#792400',
+  black: '#000',
+  white: '#fff',
+};
+
+export const lightModeColors = {
+  primary: '#232323',
+  dark_bg: '#2E2E2E',
+  light_bg: '#DEDEDE',
+  success: '#2DE000',
+  success_1: '#92E57D',
+  success_2: '#135E00',
+  alert: '#E0CA00',
+  alert_1: '#E5CE7D',
+  alert_2: '#796D00',
+  error: '#E00000',
+  error_1: '#E5A27D',
+  error_2: '#792400',
+  black: '#000',
+  white: '#fff',
+};
