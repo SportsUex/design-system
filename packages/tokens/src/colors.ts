@@ -15,13 +15,14 @@ export const colors = {
   gray: '#5E5E5E',
   gray_1: '#373737',
   gray_2: '#252525',
-  disable_1: '#5E5E5E',
-  disable_2: '#999999',
+  disabled: '#999999',
+  disabled_1: '#5E5E5E',
   black: '#101010',
   white: '#fafafa',
   button: '#2E2E2E',
+  button_text_secondary: '#DEDEDE',
   button_bg: '#00642E',
-  button_out_hover: '#DEDEDE',
+  button_secondary_hover_bg: '#2A0659',
 };
 
 export const lightModeColors = {
@@ -41,11 +42,12 @@ export const lightModeColors = {
   gray: '#5E5E5E',
   gray_1: '#373737',
   gray_2: '#252525',
-  disable_1: '#5E5E5E',
-  disable_2: '#999999',
+  disabled: '#999999',
+  disabled_1: '#5E5E5E',
   black: '#101010',
   white: '#fafafa',
   button: '#DEDEDE',
+  button_text_secondary: '#2E2E2E',
   button_bg: '#2A0659',
-  button_out_hover: '#DEDEDE',
+  button_secondary_hover_bg: '#00642E',
 };

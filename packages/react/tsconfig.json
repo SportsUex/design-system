@@ -1,4 +1,4 @@
 {
-  "extends":"@sportsuex/ts-config/react.json",
+  "extends": "@sportsuex/ts-config/react.json",
   "include": ["src"]
 }
