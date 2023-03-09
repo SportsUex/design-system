@@ -11,14 +11,14 @@ export default {
 
 const Template: ComponentStory<typeof Button> = args => <Button {...args} />;
 
-export const Fill = Template.bind({});
+export const Filled = Template.bind({});
 
-Fill.args = {
+Filled.args = {
   intent: 'filled',
   size: 'md',
 };
 
-Fill.argTypes = {
+Filled.argTypes = {
   children: {
     name: 'CHILDREN',
   },
