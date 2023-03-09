@@ -1,4 +1,4 @@
-import {colors} from '@sportsuex/tokens';
+import {colors, lightModeColors} from '@sportsuex/tokens';
 import {create} from '@storybook/theming';
 
 export const darkTheme = create({
@@ -29,7 +29,7 @@ export const darkTheme = create({
 export const lightTheme = create({
   base: 'dark',
 
-  colorSecondary: colors.primary,
+  colorSecondary: lightModeColors.primary,
 
   appBg: '#111',
   appContentBg: '#0c0c0c',

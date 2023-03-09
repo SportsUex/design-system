@@ -16,22 +16,24 @@ export const ButtonCSS = css({
   },
   variants: {
     intent: {
-      primary: {
+      filled: {
         background: '$primary',
         borderColor: '$primary',
-        color: '$white',
+        color: '$button',
         '&:hover': {
-          background: '#2A0659',
-          borderColor: '#4B1097',
+          background: '$button_bg',
+          borderColor: '$primary',
+          color: '$light_bg',
         },
       },
       outline_primary: {
         background: 'transparent',
         borderColor: '$primary',
-        color: '$white',
+        color: '$primary',
         '&:hover': {
-          background: '#2A0659',
-          borderColor: '#4B1097',
+          background: '$button_bg',
+          borderColor: '$primary',
+          color: '$button_out_hover',
         },
       },
     },
@@ -48,7 +50,7 @@ export const ButtonCSS = css({
     },
   },
   defaultVariants: {
-    intent: 'primary',
+    intent: 'filled',
     size: 'md',
   },
 });
