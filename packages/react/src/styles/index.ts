@@ -7,8 +7,8 @@ import {
   radii,
   shadows,
   space,
-} from '@sportsuex/tokens';
-import {createStitches, defaultThemeMap} from '@stitches/react';
+} from '@sportsuex/tokens'
+import { createStitches, defaultThemeMap } from '@stitches/react'
 
 export const {
   css,
@@ -34,7 +34,7 @@ export const {
     height: 'space',
     width: 'space',
   },
-});
+})
 
 export const lightMode = createTheme({
   colors: lightModeColors,
@@ -44,4 +44,4 @@ export const lightMode = createTheme({
   radii,
   shadows,
   space,
-});
+})

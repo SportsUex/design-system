@@ -1,12 +1,13 @@
 {
   "name": "@sportsuex/react",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "license": "MIT",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
   "devDependencies": {
     "@sportsuex/tokens": "*",
+    "@sportsuex/eslint-config": "*",
     "@sportsuex/ts-config": "*",
     "@types/react": "^18.0.28",
     "@types/react-dom": "^18.0.11",
@@ -16,7 +17,8 @@
   },
   "scripts": {
     "dev": "tsup src/index.ts --format esm,cjs --dts --external react --watch",
-    "build": "tsup src/index.ts --format esm,cjs --dts --external react"
+    "build": "tsup src/index.ts --format esm,cjs --dts --external react",
+    "lint": "eslint src/**/*.ts* --fix"
   },
   "dependencies": {
     "@radix-ui/react-checkbox": "^1.0.3",

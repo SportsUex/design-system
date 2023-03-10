@@ -24,7 +24,7 @@ export const colors = {
   button_bg: '#00642E',
   button_secondary_hover_bg: '#2A0659',
   bg: '#2E2E2E',
-};
+}
 
 export const lightModeColors = {
   primary: '#6100FF',
@@ -52,4 +52,4 @@ export const lightModeColors = {
   button_bg: '#2A0659',
   button_secondary_hover_bg: '#00642E',
   bg: '#DEDEDE',
-};
+}
