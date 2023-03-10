@@ -30,6 +30,7 @@ export const CheckBoxCSS = css({
     color: '$button',
   },
 });
+
 export interface CheckBoxProps extends ComponentProps<typeof Checkbox.Root> {}
 
 export const CheckBoxIndicator = () => {
