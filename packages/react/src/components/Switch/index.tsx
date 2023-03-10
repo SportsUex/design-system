@@ -4,7 +4,6 @@ import {styled} from '../../styles';
 
 export const SwitchRoot = styled(Sw.Root, {
   all: 'unset',
-
   backgroundColor: '$disabled',
   borderRadius: '9999px',
   position: 'relative',
