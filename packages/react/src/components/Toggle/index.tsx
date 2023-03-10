@@ -1,5 +1,5 @@
-import * as ToggleGroup from '@radix-ui/react-toggle-group';
-import {css} from '../../styles';
+import * as ToggleGroup from '@radix-ui/react-toggle-group'
+import { css } from '../../styles'
 
 export const ToggleRootCSS = css({
   borderRadius: '$basic',
@@ -40,26 +40,26 @@ export const ToggleRootCSS = css({
     borderStartStartRadius: '0px',
     borderEndStartRadius: '0px',
   },
-});
-export const ToggleRoot = ToggleGroup.Root;
+})
+export const ToggleRoot = ToggleGroup.Root
 ToggleRoot.defaultProps = {
   type: 'single',
   defaultChecked: true,
   className: ToggleRootCSS(),
-};
+}
 
-ToggleRoot.displayName = 'ToggleRoot';
+ToggleRoot.displayName = 'ToggleRoot'
 export interface ToggleRootProps extends ToggleGroup.ToggleGroupMultipleProps {}
 
 export const ToggleItemCSS = css({
   width: '100%',
-});
-export const ToggleItem = ToggleGroup.Item;
+})
+export const ToggleItem = ToggleGroup.Item
 
 ToggleItem.defaultProps = {
   className: ToggleItemCSS(),
-};
+}
 
-ToggleItem.displayName = 'ToggleItem';
+ToggleItem.displayName = 'ToggleItem'
 
-export interface ToggleRootProps extends ToggleGroup.ToggleGroupMultipleProps {}
+export interface ToggleItemProps extends ToggleGroup.ToggleGroupItemProps {}

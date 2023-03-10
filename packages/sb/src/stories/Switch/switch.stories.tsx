@@ -48,7 +48,45 @@ Unchecked.args = {
   defaultChecked: false,
 };
 
+Unchecked.argTypes = {
+  defaultChecked: {
+    table: {
+      disable: true,
+    },
+  },
+  size: {
+    name: 'SIZE',
+    type: 'boolean',
+    defaultValue: 'normal',
+    description: 'SWITCH BETWEEN SIZES',
+    table: {defaultValue: {summary: 'normal'}},
+    control: {
+      type: 'inline-radio',
+      options: ['sm', 'normal'],
+    },
+  },
+};
+
 export const With_Label = TemplateWithLabel.bind({});
 With_Label.args = {
   defaultChecked: true,
+};
+
+With_Label.argTypes = {
+  defaultChecked: {
+    table: {
+      disable: true,
+    },
+  },
+  size: {
+    name: 'SIZE',
+    type: 'boolean',
+    defaultValue: 'normal',
+    description: 'SWITCH BETWEEN SIZES',
+    table: {defaultValue: {summary: 'normal'}},
+    control: {
+      type: 'inline-radio',
+      options: ['sm', 'normal'],
+    },
+  },
 };

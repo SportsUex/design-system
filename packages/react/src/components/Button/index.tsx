@@ -1,5 +1,5 @@
-import {ComponentProps} from '@stitches/react';
-import {css, styled} from '../../styles';
+import { ComponentProps } from '@stitches/react'
+import { css, styled } from '../../styles'
 export const ButtonCSS = css({
   fontFamily: '$raj',
   paddingTop: '0.813rem',
@@ -73,19 +73,19 @@ export const ButtonCSS = css({
       intent: 'filled',
       variant: 'primary',
 
-      css: {'&:not(:disabled)': {color: '$button', background: '$primary'}},
+      css: { '&:not(:disabled)': { color: '$button', background: '$primary' } },
     },
     {
       intent: 'outline',
       variant: 'primary',
 
-      css: {'&:not(:disabled)': {color: '$primary'}},
+      css: { '&:not(:disabled)': { color: '$primary' } },
     },
     {
       intent: 'outline',
       variant: 'secondary',
 
-      css: {'&:not(:disabled)': {color: '$secondary'}},
+      css: { '&:not(:disabled)': { color: '$secondary' } },
     },
     {
       intent: 'filled',
@@ -104,7 +104,7 @@ export const ButtonCSS = css({
     intent: 'filled',
     size: 'md',
   },
-});
-export const Button = styled('button', ButtonCSS);
-Button.displayName = 'Button';
+})
+export const Button = styled('button', ButtonCSS)
+Button.displayName = 'Button'
 export interface ButtonProps extends ComponentProps<typeof Button> {}

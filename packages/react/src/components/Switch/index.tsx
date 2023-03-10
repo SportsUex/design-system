@@ -1,15 +1,15 @@
-import * as Sw from '@radix-ui/react-switch';
-import {ComponentProps} from '@stitches/react';
-import {styled} from '../../styles';
+import * as Sw from '@radix-ui/react-switch'
+import { ComponentProps } from '@stitches/react'
+import { styled } from '../../styles'
 
 export const SwitchRoot = styled(Sw.Root, {
   all: 'unset',
   backgroundColor: '$disabled',
   borderRadius: '9999px',
   position: 'relative',
-  '&:hover': {cursor: 'pointer'},
+  '&:hover': { cursor: 'pointer' },
   WebkitTapHighlightColor: 'rgba(0, 0, 0, 0)',
-  '&[data-state="checked"]': {backgroundColor: '$primary'},
+  '&[data-state="checked"]': { backgroundColor: '$primary' },
 
   variants: {
     size: {
@@ -46,21 +46,21 @@ export const SwitchRoot = styled(Sw.Root, {
   defaultVariants: {
     size: 'normal',
   },
-});
+})
 
 export const SwitchThumb = styled(Sw.Thumb, {
   display: 'block',
   backgroundColor: '$gray',
   borderRadius: '9999px',
   transition: 'transform 100ms',
-});
+})
 
-export const Switch = SwitchRoot;
-Switch.displayName = 'Switch';
+export const Switch = SwitchRoot
+Switch.displayName = 'Switch'
 Switch.defaultProps = {
   size: 'normal',
   children: <SwitchThumb />,
   defaultChecked: false,
-};
+}
 
 export interface SwitchProps extends ComponentProps<typeof Switch> {}
