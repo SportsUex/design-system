@@ -19,6 +19,9 @@ jobs:
       - run: yarn
 
       - run: yarn build
+        env:
+          TURBO_TOKEN: ${{ secrets.VERCEL_TOKEN_CACHE }}
+          TURBO_TEAM: ${{ secrets.SLUG_VERCEL }}
 
       - name: Deploy Storybook
         working-directory: ./packages/sb
