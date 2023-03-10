@@ -48,5 +48,6 @@ CheckBox.defaultProps = {
   defaultChecked: false,
   children: <CheckBoxIndicator />,
 };
+
 export interface CheckBoxIndicatorProps
   extends ComponentProps<typeof Checkbox.CheckboxIndicator> {}

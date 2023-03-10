@@ -1,5 +1,11 @@
 # @sportsuex/react
 
+## 1.0.4
+
+### Patch Changes
+
+- CI
+
 ## 1.0.3
 
 ### Patch Changes
