@@ -1,6 +1,6 @@
-import {ToggleItem, ToggleRoot} from '@sportsuex/react';
-import {ComponentStory, Meta} from '@storybook/react';
-import React from 'react';
+import { ToggleItem, ToggleRoot } from '@sportsuex/react'
+import { ComponentStory, Meta } from '@storybook/react'
+import React from 'react'
 
 export default {
   title: 'Forms/Toggle',
@@ -8,27 +8,27 @@ export default {
   args: {
     type: 'multiple',
   },
-} as Meta<typeof ToggleRoot>;
+} as Meta<typeof ToggleRoot>
 
-const Template: ComponentStory<typeof ToggleRoot> = args => (
+const Template: ComponentStory<typeof ToggleRoot> = (args) => (
   <ToggleRoot {...args} />
-);
-export const Single = Template.bind({});
+)
+export const Single = Template.bind({})
 Single.args = {
   type: 'single',
   defaultChecked: true,
   defaultValue: 'CPF',
   children: (
     <React.Fragment key={'Only in StoryBook'}>
-      <ToggleItem value='CPF' aria-label='CPF'>
+      <ToggleItem value="CPF" aria-label="CPF">
         CPF
       </ToggleItem>
-      <ToggleItem value='CNPJ' aria-label='CNPJ'>
+      <ToggleItem value="CNPJ" aria-label="CNPJ">
         CNPJ
       </ToggleItem>
     </React.Fragment>
   ),
-};
+}
 
 Single.argTypes = {
   type: {
@@ -45,8 +45,8 @@ Single.argTypes = {
   children: {
     name: 'CHILDREN',
     control: false,
-    //@ts-ignore
-    type: {required: true},
+    // @ts-ignore
+    type: { required: true },
     description:
       " `<ToggleItem value=' VALUE ' aria-label=' WHAT THIS REPRESENTS ' > LABE L</ToggleItem>`",
     table: {
@@ -57,8 +57,8 @@ Single.argTypes = {
   },
   defaultValue: {
     name: 'DEFAULT VALUE',
-    //@ts-ignore
-    type: {required: true},
+    // @ts-ignore
+    type: { required: true },
     control: false,
     description: 'DETERMINES WHICH OPTION WILL START IN THE VALUE CONTEXT',
     table: {
@@ -70,8 +70,8 @@ Single.argTypes = {
   defaultChecked: {
     name: 'DEFAULT CHECKED',
     control: false,
-    //@ts-ignore
-    type: {required: true},
+    // @ts-ignore
+    type: { required: true },
     description: 'DETERMINES WHICH OPTION WILL START CHECKED',
     table: {
       defaultValue: {
@@ -79,21 +79,21 @@ Single.argTypes = {
       },
     },
   },
-};
+}
 
-export const Multiple = Template.bind({});
+export const Multiple = Template.bind({})
 Multiple.args = {
   type: 'multiple',
   defaultChecked: true,
   defaultValue: ['CPF', 'CNPJ'],
   children: (
     <>
-      <ToggleItem value='CPF'>CPF</ToggleItem>
-      <ToggleItem value='RG'>RG</ToggleItem>
-      <ToggleItem value='CNPJ'>CNPJ</ToggleItem>
+      <ToggleItem value="CPF">CPF</ToggleItem>
+      <ToggleItem value="RG">RG</ToggleItem>
+      <ToggleItem value="CNPJ">CNPJ</ToggleItem>
     </>
   ),
-};
+}
 
 Multiple.argTypes = {
   type: {
@@ -112,4 +112,4 @@ Multiple.argTypes = {
     name: 'DEFAULT CHECKED',
     control: false,
   },
-};
+}

@@ -1,0 +1,4 @@
+{
+  "extends": "@sportsuex/eslint-config",
+  "ignorePatterns": ["src/assets/*", "src/pages/*"]
+}

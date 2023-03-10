@@ -1,5 +1,5 @@
-import {Button, ButtonProps} from '@sportsuex/react';
-import {ComponentStory, Meta} from '@storybook/react';
+import { Button, ButtonProps } from '@sportsuex/react'
+import { ComponentStory, Meta } from '@storybook/react'
 
 export default {
   title: 'Forms/Button',
@@ -7,18 +7,18 @@ export default {
   args: {
     children: 'Button',
   },
-} as Meta<ButtonProps>;
+} as Meta<ButtonProps>
 
-const Template: ComponentStory<typeof Button> = args => <Button {...args} />;
+const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />
 
-export const Primary = Template.bind({});
+export const Primary = Template.bind({})
 
 Primary.args = {
   intent: 'filled',
   variant: 'primary',
   size: 'md',
   disabled: false,
-};
+}
 
 Primary.argTypes = {
   disabled: {
@@ -30,14 +30,14 @@ Primary.argTypes = {
   children: {
     description: 'CHANGE THE TEXT INSIDE THE BUTTON',
     // @ts-ignore
-    type: {required: true},
+    type: { required: true },
     name: 'CHILDREN',
   },
   intent: {
     name: 'INTENT',
     description: 'ALTERNATE BETWEEN BUTTON FILLING TYPES',
     table: {
-      defaultValue: {summary: 'filled'},
+      defaultValue: { summary: 'filled' },
     },
     control: {
       type: 'inline-radio',
@@ -48,7 +48,7 @@ Primary.argTypes = {
     name: 'SIZE',
     description: 'ALTERNATE BETWEEN BUTTON SIZES',
     table: {
-      defaultValue: {summary: 'md'},
+      defaultValue: { summary: 'md' },
     },
     control: {
       type: 'inline-radio',
@@ -59,23 +59,23 @@ Primary.argTypes = {
     name: 'VARIANT',
     description: 'ALTERNATE BETWEEN BUTTON COLORS',
     table: {
-      defaultValue: {summary: 'primary'},
+      defaultValue: { summary: 'primary' },
     },
     control: {
       type: 'inline-radio',
       options: ['primary', 'secondary'],
     },
   },
-};
+}
 
-export const Secondary = Template.bind({});
+export const Secondary = Template.bind({})
 
 Secondary.args = {
   intent: 'filled',
   variant: 'secondary',
   size: 'md',
   disabled: false,
-};
+}
 
 Secondary.argTypes = {
   disabled: {
@@ -86,14 +86,14 @@ Secondary.argTypes = {
   },
   children: {
     // @ts-ignore
-    type: {required: true},
+    type: { required: true },
     name: 'CHILDREN',
   },
   intent: {
     name: 'INTENT',
     description: 'BUTTON TYPE',
     table: {
-      defaultValue: {summary: 'filled'},
+      defaultValue: { summary: 'filled' },
     },
     control: {
       type: 'inline-radio',
@@ -103,7 +103,7 @@ Secondary.argTypes = {
   size: {
     name: 'SIZE',
     table: {
-      defaultValue: {summary: 'md'},
+      defaultValue: { summary: 'md' },
     },
     control: {
       type: 'inline-radio',
@@ -113,25 +113,25 @@ Secondary.argTypes = {
   variant: {
     name: 'VARIANT',
     table: {
-      defaultValue: {summary: 'primary'},
+      defaultValue: { summary: 'primary' },
     },
     control: {
       type: 'inline-radio',
       options: ['primary', 'secondary'],
     },
   },
-};
+}
 
-export const Outline_Primary = Template.bind({});
+export const OutlinePrimary = Template.bind({})
 
-Outline_Primary.args = {
+OutlinePrimary.args = {
   intent: 'outline',
   variant: 'primary',
   size: 'md',
   disabled: false,
-};
+}
 
-Outline_Primary.argTypes = {
+OutlinePrimary.argTypes = {
   disabled: {
     name: 'DISABLED',
     control: {
@@ -140,14 +140,14 @@ Outline_Primary.argTypes = {
   },
   children: {
     // @ts-ignore
-    type: {required: true},
+    type: { required: true },
     name: 'CHILDREN',
   },
   intent: {
     name: 'INTENT',
     description: 'BUTTON TYPE',
     table: {
-      defaultValue: {summary: 'filled'},
+      defaultValue: { summary: 'filled' },
     },
     control: {
       type: 'inline-radio',
@@ -157,7 +157,7 @@ Outline_Primary.argTypes = {
   size: {
     name: 'SIZE',
     table: {
-      defaultValue: {summary: 'md'},
+      defaultValue: { summary: 'md' },
     },
     control: {
       type: 'inline-radio',
@@ -167,25 +167,25 @@ Outline_Primary.argTypes = {
   variant: {
     name: 'VARIANT',
     table: {
-      defaultValue: {summary: 'primary'},
+      defaultValue: { summary: 'primary' },
     },
     control: {
       type: 'inline-radio',
       options: ['primary', 'secondary'],
     },
   },
-};
+}
 
-export const Outline_Secondary = Template.bind({});
+export const OutlineSecondary = Template.bind({})
 
-Outline_Secondary.args = {
+OutlineSecondary.args = {
   intent: 'outline',
   variant: 'secondary',
   size: 'md',
   disabled: false,
-};
+}
 
-Outline_Secondary.argTypes = {
+OutlineSecondary.argTypes = {
   disabled: {
     name: 'DISABLED',
     control: {
@@ -194,7 +194,7 @@ Outline_Secondary.argTypes = {
   },
   children: {
     // @ts-ignore
-    type: {required: true},
+    type: { required: true },
     name: 'CHILDREN',
   },
   intent: {
@@ -202,7 +202,7 @@ Outline_Secondary.argTypes = {
 
     description: 'BUTTON TYPE',
     table: {
-      defaultValue: {summary: 'filled'},
+      defaultValue: { summary: 'filled' },
     },
     control: {
       type: 'inline-radio',
@@ -212,7 +212,7 @@ Outline_Secondary.argTypes = {
   size: {
     name: 'SIZE',
     table: {
-      defaultValue: {summary: 'md'},
+      defaultValue: { summary: 'md' },
     },
     control: {
       type: 'inline-radio',
@@ -222,25 +222,25 @@ Outline_Secondary.argTypes = {
   variant: {
     name: 'VARIANT',
     table: {
-      defaultValue: {summary: 'primary'},
+      defaultValue: { summary: 'primary' },
     },
     control: {
       type: 'inline-radio',
       options: ['primary', 'secondary'],
     },
   },
-};
+}
 
-export const Disabled = Template.bind({});
+export const Disabled = Template.bind({})
 
 Disabled.args = {
   disabled: true,
-};
+}
 
 Disabled.argTypes = {
   children: {
     // @ts-ignore
-    type: {required: true},
+    type: { required: true },
     name: 'CHILDREN',
   },
   disabled: {
@@ -249,4 +249,4 @@ Disabled.argTypes = {
       type: 'boolean',
     },
   },
-};
+}

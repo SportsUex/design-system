@@ -1,28 +1,29 @@
-import {Switch, SwitchProps, theme} from '@sportsuex/react';
-import {ComponentStory, Meta} from '@storybook/react';
+import { Switch, SwitchProps, theme } from '@sportsuex/react'
+import { ComponentStory, Meta } from '@storybook/react'
 
 export default {
   title: 'Forms/Switch',
   component: Switch,
-} as Meta<SwitchProps>;
+} as Meta<SwitchProps>
 
-const Template: ComponentStory<typeof Switch> = args => <Switch {...args} />;
+const Template: ComponentStory<typeof Switch> = (args) => <Switch {...args} />
 
-const TemplateWithLabel: ComponentStory<typeof Switch> = args => (
-  <div style={{display: 'flex', alignItems: 'center', gap: '.5rem'}}>
-    <Switch {...args} id='teste' />
+const TemplateWithLabel: ComponentStory<typeof Switch> = (args) => (
+  <div style={{ display: 'flex', alignItems: 'center', gap: '.5rem' }}>
+    <Switch {...args} id="teste" />
     <label
-      style={{color: theme.colors.button_text_secondary.toString()}}
-      htmlFor='teste'>
+      style={{ color: theme.colors.button_text_secondary.toString() }}
+      htmlFor="teste"
+    >
       Accept terms and conditions
     </label>
   </div>
-);
+)
 
-export const Checked = Template.bind({});
+export const Checked = Template.bind({})
 Checked.args = {
   defaultChecked: true,
-};
+}
 
 Checked.argTypes = {
   defaultChecked: {
@@ -35,18 +36,18 @@ Checked.argTypes = {
     type: 'boolean',
     defaultValue: 'normal',
     description: 'SWITCH BETWEEN SIZES',
-    table: {defaultValue: {summary: 'normal'}},
+    table: { defaultValue: { summary: 'normal' } },
     control: {
       type: 'inline-radio',
       options: ['sm', 'normal'],
     },
   },
-};
+}
 
-export const Unchecked = Template.bind({});
+export const Unchecked = Template.bind({})
 Unchecked.args = {
   defaultChecked: false,
-};
+}
 
 Unchecked.argTypes = {
   defaultChecked: {
@@ -59,20 +60,20 @@ Unchecked.argTypes = {
     type: 'boolean',
     defaultValue: 'normal',
     description: 'SWITCH BETWEEN SIZES',
-    table: {defaultValue: {summary: 'normal'}},
+    table: { defaultValue: { summary: 'normal' } },
     control: {
       type: 'inline-radio',
       options: ['sm', 'normal'],
     },
   },
-};
+}
 
-export const With_Label = TemplateWithLabel.bind({});
-With_Label.args = {
+export const WithLabel = TemplateWithLabel.bind({})
+WithLabel.args = {
   defaultChecked: true,
-};
+}
 
-With_Label.argTypes = {
+WithLabel.argTypes = {
   defaultChecked: {
     table: {
       disable: true,
@@ -83,10 +84,36 @@ With_Label.argTypes = {
     type: 'boolean',
     defaultValue: 'normal',
     description: 'SWITCH BETWEEN SIZES',
-    table: {defaultValue: {summary: 'normal'}},
+    table: { defaultValue: { summary: 'normal' } },
     control: {
       type: 'inline-radio',
       options: ['sm', 'normal'],
     },
   },
-};
+}
+
+export const Disabled = Template.bind({})
+Disabled.args = {
+  defaultChecked: false,
+  disabled: true,
+}
+
+Disabled.argTypes = {
+  defaultChecked: {
+    table: {
+      disable: true,
+    },
+  },
+  disabled: { name: 'DISABLED' },
+  size: {
+    name: 'SIZE',
+    type: 'boolean',
+    defaultValue: 'normal',
+    description: 'SWITCH BETWEEN SIZES',
+    table: { defaultValue: { summary: 'normal' } },
+    control: {
+      type: 'inline-radio',
+      options: ['sm', 'normal'],
+    },
+  },
+}
