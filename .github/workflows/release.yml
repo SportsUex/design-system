@@ -20,7 +20,7 @@ jobs:
         with:
           node-version: 16.19.0
           cache: "yarn"
-          cache-dependency-path: "**/.lock"
+          cache-dependency-path: "**/yarn.lock"
 
       - run: yarn
 
