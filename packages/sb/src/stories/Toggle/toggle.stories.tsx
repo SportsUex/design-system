@@ -23,9 +23,6 @@ Single.args = {
       <ToggleItem value='CPF' aria-label='CPF'>
         CPF
       </ToggleItem>
-      <ToggleItem value='RG' aria-label='RG'>
-        RG
-      </ToggleItem>
       <ToggleItem value='CNPJ' aria-label='CNPJ'>
         CNPJ
       </ToggleItem>

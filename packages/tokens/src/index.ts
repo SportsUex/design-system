@@ -5,6 +5,3 @@ export * from './fonts';
 export * from './radii';
 export * from './shadows';
 export * from './space';
-
-
-

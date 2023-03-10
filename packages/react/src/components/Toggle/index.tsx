@@ -20,6 +20,7 @@ export const ToggleRootCSS = css({
     '&:hover': {
       background: '$button_bg',
       color: '$white',
+      cursor: 'pointer',
     },
   },
   '& > [data-state="on"]': {
@@ -27,6 +28,7 @@ export const ToggleRootCSS = css({
     appearance: 'none',
     borderStyle: 'none',
     background: '$primary',
+    cursor: 'pointer',
   },
   ':first-child': {
     borderRadius: '5px',
