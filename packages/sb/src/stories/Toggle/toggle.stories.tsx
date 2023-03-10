@@ -113,3 +113,73 @@ Multiple.argTypes = {
     control: false,
   },
 }
+
+export const Disabled = Template.bind({})
+
+Disabled.args = {
+  // @ts-ignore
+  'data-disabled': true,
+  type: 'single',
+  defaultChecked: true,
+  defaultValue: 'CPF',
+  children: (
+    <React.Fragment key={'Only in StoryBook'}>
+      <ToggleItem value="CPF" aria-label="CPF">
+        CPF
+      </ToggleItem>
+      <ToggleItem value="CNPJ" aria-label="CNPJ">
+        CNPJ
+      </ToggleItem>
+    </React.Fragment>
+  ),
+}
+
+Disabled.argTypes = {
+  type: {
+    name: 'TYPE',
+    control: false,
+    description: 'DETERMINES IF IS POSSIBLE TO SELECT MORE THAN ONE OPTION',
+    table: {
+      defaultValue: {
+        summary: 'single',
+      },
+    },
+  },
+  children: {
+    name: 'CHILDREN',
+    control: false,
+    // @ts-ignore
+    type: { required: true },
+    description:
+      " `<ToggleItem value=' VALUE ' aria-label=' WHAT THIS REPRESENTS ' > LABE L</ToggleItem>`",
+    table: {
+      defaultValue: {
+        summary: 'EMPTY',
+      },
+    },
+  },
+  defaultValue: {
+    name: 'DEFAULT VALUE',
+    // @ts-ignore
+    type: { required: true },
+    control: false,
+    description: 'DETERMINES WHICH OPTION WILL START IN THE VALUE CONTEXT',
+    table: {
+      defaultValue: {
+        summary: 'EMPTY',
+      },
+    },
+  },
+  defaultChecked: {
+    name: 'DEFAULT CHECKED',
+    control: false,
+    // @ts-ignore
+    type: { required: true },
+    description: 'DETERMINES WHICH OPTION WILL START CHECKED',
+    table: {
+      defaultValue: {
+        summary: 'EMPTY',
+      },
+    },
+  },
+}

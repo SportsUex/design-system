@@ -6,17 +6,19 @@ import { css } from '../../styles'
 export const CheckBoxCSS = css({
   background: 'transparent',
   borderWidth: '2px',
-  borderStyle: 'solid',
-  borderColor: '$disabled_1',
   appearance: 'none',
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',
+  borderStyle: 'solid',
   width: '25px',
   height: '25px',
   borderRadius: '4px',
-  '&:hover': {
-    cursor: 'pointer',
+  borderColor: '$disabled_1',
+  ':first-child': {
+    width: '25px',
+    height: '25px',
+    color: '$button',
   },
   '&[data-state="checked"]': {
     background: '$primary',
@@ -24,11 +26,57 @@ export const CheckBoxCSS = css({
     width: '25px',
     height: '25px',
   },
-  ':first-child': {
-    width: '25px',
-    height: '25px',
-    color: '$button',
+  '&:hover': {
+    cursor: 'pointer',
   },
+  '&:disabled': {
+    '&[data-state="checked"]': {
+      background: '$disabled_1',
+      borderColor: '$disabled_1',
+      width: '25px',
+      height: '25px',
+    },
+    '&:hover': {
+      cursor: 'not-allowed',
+    },
+  },
+
+  // compoundVariants: [
+  //   {
+  //     disabled: true,
+  //     css: {
+  //       '&[data-state="checked"]': {
+  //         background: '$disabled_1',
+  //         borderColor: '$disabled_1',
+  //         width: '25px',
+  //         height: '25px',
+  //       },
+  //       '&:hover': {
+  //         cursor: 'not-allowed',
+  //       },
+  //     },
+  //   },
+  //   {
+  //     disabled: false,
+  //     css: {
+  //       '&[data-state="checked"]': {
+  //         background: '$primary',
+  //         borderColor: '$primary',
+  //         width: '25px',
+  //         height: '25px',
+  //       },
+  //       '&:hover': {
+  //         cursor: 'pointer',
+  //       },
+  //     },
+  //   },
+  // ],
+  // variants: {
+  //   disabled: {
+  //     true: {},
+  //     false: {},
+  //   },
+  // },
 })
 
 export interface CheckBoxProps extends ComponentProps<typeof Checkbox.Root> {}
@@ -46,6 +94,7 @@ export const CheckBox = Checkbox.Root
 CheckBox.defaultProps = {
   className: CheckBoxCSS(),
   defaultChecked: false,
+  disabled: false,
   children: <CheckBoxIndicator />,
 }
 

@@ -26,6 +26,7 @@ export const Checked = Template.bind({})
 Checked.args = {
   defaultChecked: true,
 }
+
 Checked.argTypes = {
   defaultChecked: { table: { disable: true } },
 }
@@ -34,6 +35,7 @@ export const Unchecked = Template.bind({})
 Unchecked.args = {
   defaultChecked: false,
 }
+
 Unchecked.argTypes = {
   defaultChecked: { table: { disable: true } },
 }
@@ -42,6 +44,31 @@ export const WithLabel = TemplateWithLabel.bind({})
 WithLabel.args = {
   defaultChecked: true,
 }
+
 WithLabel.argTypes = {
   defaultChecked: { table: { disable: true } },
+}
+export const Disabled = TemplateWithLabel.bind({})
+Disabled.args = {
+  disabled: true,
+}
+
+Disabled.argTypes = {
+  defaultChecked: { table: { disable: true } },
+  disabled: {
+    name: 'DISABLED',
+  },
+}
+
+export const DisabledChecked = TemplateWithLabel.bind({})
+DisabledChecked.args = {
+  defaultChecked: true,
+  disabled: true,
+}
+
+DisabledChecked.argTypes = {
+  defaultChecked: { table: { disable: true } },
+  disabled: {
+    name: 'DISABLED',
+  },
 }
