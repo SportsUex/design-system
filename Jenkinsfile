@@ -4,7 +4,9 @@ pipeline {
         stages{
                 stage ("Teste") {
                         steps {
-                                echo "Teste Jenkins"
+                               nodejs(nodeJSInstallationName: 'Node 18.x', configId: '<config-file-provider-id>') {
+                                 sh 'node -v'
+                }
                         }
                 }
         }
