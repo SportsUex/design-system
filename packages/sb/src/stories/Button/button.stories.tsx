@@ -1,6 +1,9 @@
 import { Button, ButtonProps } from '@sportsuex/react'
 import { ComponentStory, Meta } from '@storybook/react'
 
+import { AddIcon } from '../../components/icons/add'
+import { CheckIcon } from '../../components/icons/check'
+
 export default {
   title: 'Forms/Button',
   component: Button,
@@ -231,6 +234,254 @@ OutlineSecondary.argTypes = {
   },
 }
 
+export const WithIconLeft = Template.bind({})
+
+WithIconLeft.args = {
+  intent: 'filled',
+  variant: 'primary',
+  size: 'md',
+  disabled: false,
+  children: 'ADICIONAR',
+  iconLeft: <AddIcon />,
+}
+
+WithIconLeft.argTypes = {
+  iconLeft: {
+    table: { disable: true },
+  },
+  disabled: {
+    name: 'DISABLED',
+    control: {
+      type: 'boolean',
+    },
+  },
+  children: {
+    description: 'CHANGE THE TEXT INSIDE THE BUTTON',
+    // @ts-ignore
+    type: { required: true },
+    name: 'CHILDREN',
+  },
+  intent: {
+    name: 'INTENT',
+    description: 'ALTERNATE BETWEEN BUTTON FILLING TYPES',
+    table: {
+      defaultValue: { summary: 'filled' },
+    },
+    control: {
+      type: 'inline-radio',
+      options: ['filled', 'outline'],
+    },
+  },
+  size: {
+    name: 'SIZE',
+    description: 'ALTERNATE BETWEEN BUTTON SIZES',
+    table: {
+      defaultValue: { summary: 'md' },
+    },
+    control: {
+      type: 'inline-radio',
+      options: ['sm', 'md', 'lg'],
+    },
+  },
+  variant: {
+    name: 'VARIANT',
+    description: 'ALTERNATE BETWEEN BUTTON COLORS',
+    table: {
+      defaultValue: { summary: 'primary' },
+    },
+    control: {
+      type: 'inline-radio',
+      options: ['primary', 'secondary'],
+    },
+  },
+}
+
+export const WithIconRight = Template.bind({})
+
+WithIconRight.args = {
+  intent: 'filled',
+  variant: 'primary',
+  size: 'md',
+  disabled: false,
+  children: 'CONFIRMAR',
+  iconRight: <CheckIcon />,
+}
+
+WithIconRight.argTypes = {
+  iconRight: {
+    table: { disable: true },
+  },
+  disabled: {
+    name: 'DISABLED',
+    control: {
+      type: 'boolean',
+    },
+  },
+  children: {
+    description: 'CHANGE THE TEXT INSIDE THE BUTTON',
+    // @ts-ignore
+    type: { required: true },
+    name: 'CHILDREN',
+  },
+  intent: {
+    name: 'INTENT',
+    description: 'ALTERNATE BETWEEN BUTTON FILLING TYPES',
+    table: {
+      defaultValue: { summary: 'filled' },
+    },
+    control: {
+      type: 'inline-radio',
+      options: ['filled', 'outline'],
+    },
+  },
+  size: {
+    name: 'SIZE',
+    description: 'ALTERNATE BETWEEN BUTTON SIZES',
+    table: {
+      defaultValue: { summary: 'md' },
+    },
+    control: {
+      type: 'inline-radio',
+      options: ['sm', 'md', 'lg'],
+    },
+  },
+  variant: {
+    name: 'VARIANT',
+    description: 'ALTERNATE BETWEEN BUTTON COLORS',
+    table: {
+      defaultValue: { summary: 'primary' },
+    },
+    control: {
+      type: 'inline-radio',
+      options: ['primary', 'secondary'],
+    },
+  },
+}
+
+export const OutlineWithIconLeft = Template.bind({})
+
+OutlineWithIconLeft.args = {
+  intent: 'outline',
+  variant: 'primary',
+  size: 'md',
+  disabled: false,
+  children: 'ADICIONAR',
+  iconLeft: <AddIcon />,
+}
+
+OutlineWithIconLeft.argTypes = {
+  iconLeft: {
+    table: { disable: true },
+  },
+  disabled: {
+    name: 'DISABLED',
+    control: {
+      type: 'boolean',
+    },
+  },
+  children: {
+    description: 'CHANGE THE TEXT INSIDE THE BUTTON',
+    // @ts-ignore
+    type: { required: true },
+    name: 'CHILDREN',
+  },
+  intent: {
+    name: 'INTENT',
+    description: 'ALTERNATE BETWEEN BUTTON FILLING TYPES',
+    table: {
+      defaultValue: { summary: 'filled' },
+    },
+    control: {
+      type: 'inline-radio',
+      options: ['filled', 'outline'],
+    },
+  },
+  size: {
+    name: 'SIZE',
+    description: 'ALTERNATE BETWEEN BUTTON SIZES',
+    table: {
+      defaultValue: { summary: 'md' },
+    },
+    control: {
+      type: 'inline-radio',
+      options: ['sm', 'md', 'lg'],
+    },
+  },
+  variant: {
+    name: 'VARIANT',
+    description: 'ALTERNATE BETWEEN BUTTON COLORS',
+    table: {
+      defaultValue: { summary: 'primary' },
+    },
+    control: {
+      type: 'inline-radio',
+      options: ['primary', 'secondary'],
+    },
+  },
+}
+
+export const OutlineWithIconRight = Template.bind({})
+
+OutlineWithIconRight.args = {
+  intent: 'outline',
+  variant: 'primary',
+  size: 'md',
+  disabled: false,
+  children: 'CONFIRMAR',
+  iconRight: <CheckIcon />,
+}
+
+OutlineWithIconRight.argTypes = {
+  iconRight: {
+    table: { disable: true },
+  },
+  disabled: {
+    name: 'DISABLED',
+    control: {
+      type: 'boolean',
+    },
+  },
+  children: {
+    description: 'CHANGE THE TEXT INSIDE THE BUTTON',
+    // @ts-ignore
+    type: { required: true },
+    name: 'CHILDREN',
+  },
+  intent: {
+    name: 'INTENT',
+    description: 'ALTERNATE BETWEEN BUTTON FILLING TYPES',
+    table: {
+      defaultValue: { summary: 'filled' },
+    },
+    control: {
+      type: 'inline-radio',
+      options: ['filled', 'outline'],
+    },
+  },
+  size: {
+    name: 'SIZE',
+    description: 'ALTERNATE BETWEEN BUTTON SIZES',
+    table: {
+      defaultValue: { summary: 'md' },
+    },
+    control: {
+      type: 'inline-radio',
+      options: ['sm', 'md', 'lg'],
+    },
+  },
+  variant: {
+    name: 'VARIANT',
+    description: 'ALTERNATE BETWEEN BUTTON COLORS',
+    table: {
+      defaultValue: { summary: 'primary' },
+    },
+    control: {
+      type: 'inline-radio',
+      options: ['primary', 'secondary'],
+    },
+  },
+}
+
 export const Disabled = Template.bind({})
 
 Disabled.args = {
@@ -247,6 +498,151 @@ Disabled.argTypes = {
     name: 'DISABLED',
     control: {
       type: 'boolean',
+    },
+  },
+}
+
+export const DisabledOutline = Template.bind({})
+
+DisabledOutline.args = {
+  intent: 'outline',
+  disabled: true,
+}
+
+DisabledOutline.argTypes = {
+  children: {
+    // @ts-ignore
+    type: { required: true },
+    name: 'CHILDREN',
+  },
+  disabled: {
+    name: 'DISABLED',
+    control: {
+      type: 'boolean',
+    },
+  },
+}
+
+export const DisabledWithIcon = Template.bind({})
+
+DisabledWithIcon.args = {
+  intent: 'filled',
+  variant: 'primary',
+  size: 'md',
+  disabled: true,
+  children: 'ADICIONAR',
+  iconLeft: <AddIcon />,
+}
+
+DisabledWithIcon.argTypes = {
+  iconLeft: {
+    table: { disable: true },
+  },
+  disabled: {
+    name: 'DISABLED',
+    control: {
+      type: 'boolean',
+    },
+  },
+  children: {
+    description: 'CHANGE THE TEXT INSIDE THE BUTTON',
+    // @ts-ignore
+    type: { required: true },
+    name: 'CHILDREN',
+  },
+  intent: {
+    name: 'INTENT',
+    description: 'ALTERNATE BETWEEN BUTTON FILLING TYPES',
+    table: {
+      defaultValue: { summary: 'filled' },
+    },
+    control: {
+      type: 'inline-radio',
+      options: ['filled', 'outline'],
+    },
+  },
+  size: {
+    name: 'SIZE',
+    description: 'ALTERNATE BETWEEN BUTTON SIZES',
+    table: {
+      defaultValue: { summary: 'md' },
+    },
+    control: {
+      type: 'inline-radio',
+      options: ['sm', 'md', 'lg'],
+    },
+  },
+  variant: {
+    name: 'VARIANT',
+    description: 'ALTERNATE BETWEEN BUTTON COLORS',
+    table: {
+      defaultValue: { summary: 'primary' },
+    },
+    control: {
+      type: 'inline-radio',
+      options: ['primary', 'secondary'],
+    },
+  },
+}
+
+export const DisabledOutlineWithIcon = Template.bind({})
+
+DisabledOutlineWithIcon.args = {
+  intent: 'outline',
+  variant: 'primary',
+  size: 'md',
+  disabled: true,
+  children: 'ADICIONAR',
+  iconLeft: <AddIcon />,
+}
+
+DisabledOutlineWithIcon.argTypes = {
+  iconLeft: {
+    table: { disable: true },
+  },
+  disabled: {
+    name: 'DISABLED',
+    control: {
+      type: 'boolean',
+    },
+  },
+  children: {
+    description: 'CHANGE THE TEXT INSIDE THE BUTTON',
+    // @ts-ignore
+    type: { required: true },
+    name: 'CHILDREN',
+  },
+  intent: {
+    name: 'INTENT',
+    description: 'ALTERNATE BETWEEN BUTTON FILLING TYPES',
+    table: {
+      defaultValue: { summary: 'filled' },
+    },
+    control: {
+      type: 'inline-radio',
+      options: ['filled', 'outline'],
+    },
+  },
+  size: {
+    name: 'SIZE',
+    description: 'ALTERNATE BETWEEN BUTTON SIZES',
+    table: {
+      defaultValue: { summary: 'md' },
+    },
+    control: {
+      type: 'inline-radio',
+      options: ['sm', 'md', 'lg'],
+    },
+  },
+  variant: {
+    name: 'VARIANT',
+    description: 'ALTERNATE BETWEEN BUTTON COLORS',
+    table: {
+      defaultValue: { summary: 'primary' },
+    },
+    control: {
+      type: 'inline-radio',
+      options: ['primary', 'secondary'],
     },
   },
 }

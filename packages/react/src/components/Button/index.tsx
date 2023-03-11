@@ -1,4 +1,5 @@
 import { ComponentProps } from '@stitches/react'
+import React from 'react'
 import { css, styled } from '../../styles'
 export const ButtonCSS = css({
   fontFamily: '$raj',
@@ -11,14 +12,20 @@ export const ButtonCSS = css({
   borderRadius: '0.5rem',
   fontWeight: '$600',
   transition: '.1s ease-in-out',
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
+  gap: '0.625rem',
+  '& > svg > path': {
+    transition: '.1s ease-in-out',
+  },
+  // '& > img , span': {
+  //   background: 'red',
+  // },
   '&:not(:disabled):hover': {
     cursor: 'pointer',
   },
-  '&:disabled': {
-    background: '$disabled',
-    color: '$disabled_1',
-    borderColor: '$disabled',
-  },
+
   '&:disabled:hover': {
     cursor: 'no-drop',
   },
@@ -33,6 +40,9 @@ export const ButtonCSS = css({
           background: '$button_bg',
           borderColor: '$primary',
           color: '$light_bg',
+          '& > svg > path': {
+            fill: '$light_bg',
+          },
         },
       },
       secondary: {
@@ -59,12 +69,24 @@ export const ButtonCSS = css({
     size: {
       sm: {
         fontSize: '$sm',
+        '&>img': {
+          width: '18px',
+          height: '18px',
+        },
       },
       md: {
         fontSize: '$md',
+        '&>img': {
+          width: '24px',
+          height: '24px',
+        },
       },
       lg: {
         fontSize: '$lg',
+        '&>img': {
+          width: '24px',
+          height: '24px',
+        },
       },
     },
   },
@@ -73,28 +95,85 @@ export const ButtonCSS = css({
       intent: 'filled',
       variant: 'primary',
 
-      css: { '&:not(:disabled)': { color: '$button', background: '$primary' } },
+      css: {
+        '&:disabled': {
+          background: '$disabled',
+          color: '$disabled_1',
+          borderColor: '$disabled',
+        },
+        '&:disabled > svg > path': {
+          fill: '$disabled_1',
+        },
+        '&:not(:disabled)': {
+          color: '$button',
+          background: '$primary',
+          '& > svg > path': { fill: '$button' },
+        },
+      },
     },
     {
       intent: 'outline',
       variant: 'primary',
 
-      css: { '&:not(:disabled)': { color: '$primary' } },
+      css: {
+        '&:disabled': {
+          background: 'transparent',
+          color: '$disabled_1',
+          borderColor: '$disabled',
+          '& > svg > path': { fill: '$disabled_1' },
+        },
+        '&:not(:disabled)': {
+          color: '$primary',
+          '& > svg > path': { fill: '$primary' },
+        },
+      },
     },
     {
       intent: 'outline',
       variant: 'secondary',
 
-      css: { '&:not(:disabled)': { color: '$secondary' } },
+      css: {
+        '&:disabled': {
+          background: 'transparent',
+          color: '$disabled_1',
+          borderColor: '$disabled',
+          '& > svg > path': { fill: '$disabled_1' },
+        },
+        '&:not(:disabled)': {
+          color: '$secondary',
+          '& > svg > path': { fill: '$secondary' },
+          '&:hover': {
+            '& > svg > path': {
+              fill: '$light_bg',
+            },
+          },
+        },
+      },
     },
     {
       intent: 'filled',
       variant: 'secondary',
 
       css: {
+        '&:disabled': {
+          background: '$disabled',
+          color: '$disabled_1',
+          borderColor: '$disabled',
+        },
+        '&:disabled > svg > path': {
+          fill: '$disabled_1',
+        },
         '&:not(:disabled)': {
           color: '$button_text_secondary',
           background: '$secondary',
+          '& > svg > path': {
+            fill: '$button_text_secondary',
+          },
+          '&:hover': {
+            '& > svg > path': {
+              fill: '$light_bg',
+            },
+          },
         },
       },
     },
@@ -105,6 +184,20 @@ export const ButtonCSS = css({
     size: 'md',
   },
 })
-export const Button = styled('button', ButtonCSS)
-Button.displayName = 'Button'
-export interface ButtonProps extends ComponentProps<typeof Button> {}
+export const ButtonStyled = styled('button', ButtonCSS)
+ButtonStyled.displayName = 'Button'
+
+export interface ButtonProps extends ComponentProps<typeof ButtonStyled> {
+  iconLeft: React.ReactNode
+  iconRight: React.ReactNode
+}
+
+export const Button = (args: ButtonProps) => {
+  return (
+    <ButtonStyled {...args}>
+      {args.iconLeft}
+      <span>{args.children}</span>
+      {args.iconRight}
+    </ButtonStyled>
+  )
+}
