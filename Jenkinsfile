@@ -1,9 +1,11 @@
 pipeline {
         agent any
 
-        stage{
-                steps ("Teste") {
-                        echo "Teste Jenkins"
+        stages{
+                stage ("Teste") {
+                        steps {
+                                echo "Teste Jenkins"
+                        }
                 }
         }
 }
