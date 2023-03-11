@@ -1,8 +1,8 @@
 pipeline {
-        agent ubuntu
+        agent any
 
-        stages{
-                stage ("Teste") {
+        stage{
+                steps ("Teste") {
                         echo "Teste Jenkins"
                 }
         }
