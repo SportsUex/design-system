@@ -4,7 +4,7 @@ pipeline {
         stages{
                 stage ("Teste") {
                         steps {
-                               nodejs(nodeJSInstallationName: 'Node 18.x', configId: '<config-file-provider-id>') {
+                               nodejs(nodeJSInstallationName: 'node18', configId: '<config-file-provider-id>') {
                                  sh 'node -v'
                 }
                         }
